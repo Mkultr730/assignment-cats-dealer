@@ -1,5 +1,5 @@
-class CatsUnlimitedService < CatShopService
-    def fetch_prices
+class CatShops::CatsUnlimitedService < CatShopService
+    def fetch_cats
       response = RestClient.get(ENV['CATS_UNLIMITED_API_URL'])
       cats = JSON.parse(response.body)
       cats.each do |cat|

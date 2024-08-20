@@ -1,10 +1,10 @@
-class CatShopFactory
+class CatShops::CatShopFactory
   def self.create(shop_name)
     case shop_name
     when 'CatsUnlimited'
-      CatsUnlimitedService.new
+      CatShops::CatsUnlimitedService.new
     when 'HappyCats'
-      HappyCatsService.new
+      CatShops::HappyCatsService.new
     else
       raise "Unsupported shop: #{shop_name}"
     end
