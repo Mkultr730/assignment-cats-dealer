@@ -85,6 +85,8 @@ GEM
       domain_name (~> 0.5)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
+    json-schema (4.3.1)
+      addressable (>= 2.8)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -178,6 +180,17 @@ GEM
       rspec-mocks (~> 3.6.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    rswag-api (2.14.0)
+      activesupport (>= 5.2, < 8.0)
+      railties (>= 5.2, < 8.0)
+    rswag-specs (2.14.0)
+      activesupport (>= 5.2, < 8.0)
+      json-schema (>= 2.2, < 5.0)
+      railties (>= 5.2, < 8.0)
+      rspec-core (>= 2.14)
+    rswag-ui (2.14.0)
+      actionpack (>= 5.2, < 8.0)
+      railties (>= 5.2, < 8.0)
     ruby_dep (1.5.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -243,6 +256,9 @@ DEPENDENCIES
   rails (~> 5.2)
   rest-client
   rspec-rails (~> 3.6.0)
+  rswag-api
+  rswag-specs
+  rswag-ui
   sass-rails (~> 5.0)
   sqlite3
   turbolinks (~> 5)

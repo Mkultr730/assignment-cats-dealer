@@ -1,0 +1,49 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/cats/best_deal":
+    get:
+      summary: Retrieves best deal
+      tags:
+      - Cats
+      parameters:
+      - name: cats_type
+        in: query
+        description: Cat Type
+        schema:
+          type: string
+      - name: user_location
+        in: query
+        description: User Location
+        schema:
+          type: string
+      responses:
+        '200':
+          description: cats found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      location:
+                        type: string
+                      price:
+                        type: number
+                        format: float
+                      image:
+                        type: string
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000

@@ -15,6 +15,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'rswag-api'
+gem 'rswag-ui'
+
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'web-console', '>= 3.3.0'
@@ -23,4 +26,8 @@ end
 group :test do
   gem 'rspec-rails', '~> 3.6.0'
   gem 'webmock'
+end
+
+group :development, :test do
+  gem 'rswag-specs'
 end
