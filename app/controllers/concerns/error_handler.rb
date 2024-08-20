@@ -14,7 +14,7 @@ module ErrorHandler
   end
 
   def socket_error(exception)
-    render json: { error: "Network error: #{exception.record.errors.full_messages.join(', ')}" }, status: :unprocessable_entity
+    render json: { error: "Network error: #{exception.message}" }, status: :unprocessable_entity
   end
 
   # def standard_error(exception)

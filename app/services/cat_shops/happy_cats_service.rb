@@ -2,7 +2,7 @@ require 'nokogiri'
 
 class CatShops::HappyCatsService < CatShopService
   def fetch_cats
-    response = RestClient.get(ENV['HAPPY_CATS_API_URL'])
+    response = RestClient.get(ENV.fetch('HAPPY_CATS_API_URL'))
     xml_doc = Nokogiri::XML(response.body)
     cats = xml_doc.xpath('//cat').map do |cat_node|
       {
